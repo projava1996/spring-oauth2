@@ -17,10 +17,10 @@ public interface MenuDtoMapper extends BaseEntityMapper<MenuDetail, Menu> {
 
     MenuDetail toDto(Menu entity);
 
-    @Mapping(target = "app", expression = "java(stringToEnum(dto.getApp(), com.phungpq.authorizationserver.domain.Menu.App.class))")
+    @Mapping(target = "app", expression = "java(stringToEnum(dto.getApp(), com.authorizationserver.domain.Menu.App.class))")
     Menu toEntity(MenuDetail dto);
 
-    @Mapping(target = "app", expression = "java(stringToEnum(dto.getApp(), com.phungpq.authorizationserver.domain.Menu.App.class))")
+    @Mapping(target = "app", expression = "java(stringToEnum(dto.getApp(), com.authorizationserver.domain.Menu.App.class))")
     Menu copyDtoToEntity(MenuDetail dto, @MappingTarget Menu entity);
 
 }
