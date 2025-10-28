@@ -57,8 +57,8 @@ public class JpaRegisteredClientRepository implements RegisteredClientRepository
     }
 
     private RegisteredClient toObject(Client client) {
-        Set<String> clientAuthenticationMethods = StringUtils.commaDelimitedListToSet("");
-        Set<String> authorizationGrantTypes = StringUtils.commaDelimitedListToSet("client_credentials,refresh_token");
+        Set<String> clientAuthenticationMethods = StringUtils.commaDelimitedListToSet("client_secret_basic,client_secret_post");
+        Set<String> authorizationGrantTypes = StringUtils.commaDelimitedListToSet("client_credentials,refresh_token,password");
         Set<String> redirectUris = StringUtils.commaDelimitedListToSet("");
         Set<String> clientScopes = StringUtils.commaDelimitedListToSet("");
 
